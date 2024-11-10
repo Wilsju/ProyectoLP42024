@@ -1,4 +1,10 @@
-﻿@page "/productos"
+﻿@rendermode InteractiveServer
+@attribute [StreamRendering]
+@page "/productos"
+@* @using Microsoft.AspNetCore.Authorization
+@attribute [Authorize] *@
+
+<h3 style="text-align: center"><span>Agregar Productos</span></h3>
 
 @if (ShowForm)
 {
@@ -8,7 +14,29 @@
         <div class="card-body">
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
-                <input type="email" class="form-control" id="nombre" placeholder="Nombre" disabled="@DisableInputs">
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+            </div>
+            <div class="mb-3">
+                <label for="marca" class="form-label">Marca</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Selecciona la marca</option>
+                    <option value="1">Samsung</option>
+                    <option value="2">Apple</option>
+                    <option value="3">Huawei</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="modelo" class="form-label">Modelo</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Selecciona el modelo</option>
+                    <option value="1">S22 Plus</option>
+                    <option value="2">13 Pro Max</option>
+                    <option value="3">70 Ultra</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="precio" class="form-label">Precio</label>
+                <input type="text" class="form-control" id="precio" placeholder="0">
             </div>
             <div class="mb-3">
                 <label for="descripcion" class="form-label">Descripción</label>
@@ -31,14 +59,20 @@ else
                 <thead>
                     <tr>
                         <th scope="col">#</th>
+                        <th scope="col">Categoría</th>
                         <th scope="col">Nombre</th>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">Precio</th>
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
-                        <td></td>
+                        <td>Teléfono</td>
+                        <td>Samsung Galaxy</td>
+                        <td>S22 Plus</td>
+                        <td>RD$23000</td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                                 <span @onclick="btnEditarClick" class="btn btn-outline-warning">Editar</span>
