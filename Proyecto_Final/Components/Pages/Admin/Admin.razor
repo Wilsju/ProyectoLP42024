@@ -1,0 +1,48 @@
+﻿@rendermode InteractiveServer
+@attribute [StreamRendering]
+@page "/admin"
+@* @using Microsoft.AspNetCore.Authorization
+@attribute [Authorize] *@
+
+<h3 style="text-align: center"><span>Administracción de Productos y Usuarios</span></h3>
+
+<div class="fixed-card-container">
+    <div class="fixed-card">
+        <img src="https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+        <div class="card-body">
+            <a href="/productos" class="btn btn-primary">Agregar Productos</a>
+        </div>
+    </div>
+
+    <div class="fixed-card">
+        <img src="https://img.freepik.com/foto-gratis/arreglo-coleccion-estacionaria-moderna_23-2149309643.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <a href="/categorias" class="btn btn-primary">Agregar Categorías</a>
+        </div>
+    </div>
+
+    <div class="fixed-card">
+        <img src="https://static.vecteezy.com/system/resources/previews/020/927/096/non_2x/samsung-brand-logo-phone-symbol-white-design-south-korean-mobile-illustration-with-blue-background-free-vector.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <a href="/marcas" class="btn btn-primary">Agregar Marcas</a>
+        </div>
+    </div>
+
+    <div class="fixed-card">
+        <img src="https://www.infobae.com/resizer/v2/HLNC32AB6FCFTH6DTCM67A74RI.webp?auth=0efd9b2f85e5faa6be28bb3dd9755ad6ceb164b64db7074fb701a7a936469f23&smart=true&width=350&height=197&quality=85" class="card-img-top" alt="...">
+        <div class="card-body">
+            <a href="/modelos" class="btn btn-primary">Agregar Modelos</a>
+        </div>
+    </div>
+
+    <div class="fixed-card">
+        <img src="http://especializate.usat.edu.pe/wp-content/uploads/2020/08/El-rol-humano-de-los-gerentes-en-las-empresas.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <a href="/usuarios" class="btn btn-primary">Agregar Usuarios</a>
+        </div>
+    </div>
+</div>
+
+@code {
+
+}
